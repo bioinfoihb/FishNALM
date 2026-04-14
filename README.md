@@ -97,6 +97,12 @@ cd FishNALM
 pip install -r requirements.txt
 ```
 
+Optional: if you want to enable FlashAttention in supported environments, you can additionally install:
+
+```bash
+pip install flash-attn
+```
+
 ## Pretrained models
 
 Replace the links below with your final Hugging Face repositories after release.
@@ -274,35 +280,17 @@ Based on our current project, FishNALM can be adapted to tasks such as:
 - splice-site prediction
 - zero-shot variant effect analysis
 
-## Paper and documentation
+## Paper
 
-Please replace the placeholders below after public release.
-
-- Manuscript: `PAPER_LINK_TO_BE_ADDED`
-- Project page: `PROJECT_PAGE_LINK_TO_BE_ADDED`
-- Hugging Face organization or user page: `https://huggingface.co/YOUR_HF_USERNAME`
-
-## Citation
-
-If you use FishNALM in your work, please cite our paper.
-
-```bibtex
-@article{fishnalm_placeholder,
-  title   = {FishNALM: A Fish-Specific Foundation DNA Language Model for Fish Genomes},
-  author  = {YOUR_NAME et al.},
-  journal = {TO_BE_ADDED},
-  year    = {TO_BE_ADDED}
-}
-```
+- *FishNALM: A Fish-Specific Foundation DNA Language Model for Fish Genomes*
 
 ## License
 
-Please add your license information here before public release.
+This project is distributed under the terms described in the `LICENSE` file.
 
-```text
-License: TO_BE_ADDED
-```
+## Contact
 
-## Acknowledgements
-
-This repository contains the FishNALM codebase used for BERT-based fish genomic sequence modeling, pretraining, fine-tuning, and inference.
+**Xiao-Qin Xia**  
+Institute of Hydrobiology, Chinese Academy of Sciences  
+Email: xqxia@ihb.ac.cn  
+Email: bioinfoihb@ihb.ac.cn
