@@ -1,0 +1,21 @@
+torchrun --nproc_per_node=4 model_finetune.py \
+  --model_name_or_path /nvme0/wb_ssd0/fish_model/pretrain_fish8_large \
+  --tokenizer_path /nvme0/wb_ssd0/fish_model/pretrain_fish8_large \
+  --train_data /nvme0/wb_ssd0/Fish_GUE/H3K4me1/H3K4me1_train.csv \
+  --eval_data /nvme0/wb_ssd0/Fish_GUE/H3K4me1/H3K4me1_val.csv \
+  --test_data /nvme0/wb_ssd0/Fish_GUE/H3K4me1/H3K4me1_test.csv \
+  --train_task classification \
+  --labels "Not;Yes" \
+  --output_dir finetune8L/H3K4me1 \
+  --run_name H3K4me1 \
+  --per_device_train_batch_size 32 \
+  --gradient_accumulation_steps 4 \
+  --per_device_eval_batch_size 32 \
+  --learning_rate 1e-5 \
+  --num_train_epochs 20 \
+  --warmup_ratio 0.05 \
+  --model_max_length 512 \
+  --bf16 \
+  --load_best_model_at_end \
+  --metric_for_best_model matthews_correlation
+

@@ -1,0 +1,20 @@
+torchrun --nproc_per_node=4 model_finetune.py \
+  --model_name_or_path /nvme0/wb_ssd0/fish_model/pretrain_fish8/checkpoint-120000 \
+  --tokenizer_path /nvme0/wb_ssd0/fish_model/pretrain_fish8/checkpoint-120000 \
+  --train_data /nvme0/wb_ssd0/FishNALM/examples/pro_tata_train.csv \
+  --eval_data /nvme0/wb_ssd0/FishNALM/examples/pro_tata_val.csv \
+  --test_data /nvme0/wb_ssd0/FishNALM/examples/pro_tata_test.csv \
+  --train_task classification \
+  --labels "Not;Yes" \
+  --output_dir finetune\
+  --run_name test_finetune \
+  --per_device_train_batch_size 32 \
+  --gradient_accumulation_steps 4 \
+  --per_device_eval_batch_size 32 \
+  --learning_rate 1e-5 \
+  --num_train_epochs 5 \
+  --warmup_ratio 0.05 \
+  --model_max_length 512 \
+  --bf16 \
+  --load_best_model_at_end \
+  --metric_for_best_model matthews_correlation
