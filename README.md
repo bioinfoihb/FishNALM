@@ -2,8 +2,6 @@
 
 **FishNALM: A Fish-Specific Foundation DNA Language Model for Fish Genomes**
 
-> Placeholder Hugging Face links are intentionally left in this README. Replace them after you create your repositories.
-
 ## Overview
 
 FishNALM is a fish-specific foundation DNA language model framework for fish genomes. It is designed to learn biologically relevant sequence representations from large-scale fish genomic sequences and to support downstream genomic prediction tasks such as promoter prediction, transcription factor binding-site prediction, histone-mark prediction, splice-site prediction, and variant-effect analysis.
@@ -92,7 +90,7 @@ pip install 'torch<2.4' --index-url https://download.pytorch.org/whl/cpu
 ### 3. Install other dependencies
 
 ```bash
-git clone --recursive https://github.com/YOUR_GITHUB_USERNAME/FishNALM.git
+git clone --recursive https://github.com/bioinfoihb/FishNALM.git
 cd FishNALM
 pip install -r requirements.txt
 ```
@@ -105,27 +103,35 @@ pip install flash-attn
 
 ## Pretrained models
 
-Replace the links below with your final Hugging Face repositories after release.
+Hugging Face organization: https://huggingface.co/bioinfoihb
 
 | Model | Link |
 | --- | --- |
-| FishNALM-8 | `https://huggingface.co/YOUR_HF_USERNAME/FishNALM-8` |
-| FishNALM-8L | `https://huggingface.co/YOUR_HF_USERNAME/FishNALM-8L` |
-| FishNALM-20 | `https://huggingface.co/YOUR_HF_USERNAME/FishNALM-20` |
-| FishNALM-20L | `https://huggingface.co/YOUR_HF_USERNAME/FishNALM-20L` |
+| FishNALM-8 | `https://huggingface.co/bioinfoihb/FishNALM-8_pretrain` |
+| FishNALM-8L | `https://huggingface.co/bioinfoihb/FishNALM-8L_pretrain` |
+| FishNALM-20 | `https://huggingface.co/bioinfoihb/FishNALM-20_pretrain` |
+| FishNALM-20L | `https://huggingface.co/bioinfoihb/FishNALM-20L_pretrain` |
+
+## Datasets
+
+| Dataset | Link |
+| --- | --- |
+| Fish_GUE | `https://huggingface.co/datasets/bioinfoihb/Fish_GUE` |
+| FishNALM-8 pretrain corpus | `https://huggingface.co/datasets/bioinfoihb/FishNALM-8-pretrain-corpus` |
+| FishNALM-20 pretrain corpus | `https://huggingface.co/datasets/bioinfoihb/FishNALM-20-pretrain-corpus` |
 
 If `git-lfs` is installed, the models can be downloaded with:
 
 ```bash
 git lfs install
-git clone https://huggingface.co/YOUR_HF_USERNAME/FishNALM-8
+git clone https://huggingface.co/bioinfoihb/FishNALM-8_pretrain
 ```
 
 If downloading from Hugging Face is slow, you can optionally use a mirror:
 
 ```bash
 export HF_ENDPOINT="https://hf-mirror.com"
-huggingface-cli download YOUR_HF_USERNAME/FishNALM-8
+huggingface-cli download bioinfoihb/FishNALM-8_pretrain
 ```
 
 ## Pretraining
